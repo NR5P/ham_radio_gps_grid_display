@@ -104,9 +104,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      /*
       appBar: AppBar(
         title: Text(widget.title!),
       ),
+      */
       body: Center(
         child: Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween, // Aligns children with space in between
@@ -128,6 +130,11 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headline4,
             ),
           ],
+        ),
+        // Horizontal Divider
+        Divider(
+          thickness: 10, // Set the thickness of the divider
+          color: Colors.black, // Set the color of the divider
         ),
         // Bottom part for grid square
         Padding(
