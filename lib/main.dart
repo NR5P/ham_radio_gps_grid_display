@@ -101,6 +101,10 @@ class _MyHomePageState extends State<MyHomePage> {
     return longLetter + latLetter + longNumber.toString() + latNumber.toString() + longSubLetter + latSubLetter;
   }
 
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
