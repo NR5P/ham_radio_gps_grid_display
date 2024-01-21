@@ -31,6 +31,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   String gridSquare = "";
   String currentTime = "";
+  String dayOfWeek = "";
+  String date = "";
 
   @override
   void initState() {
@@ -74,7 +76,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void updateTime() {
     setState(() {
-      currentTime = DateFormat('HH:mm:ss').format(DateTime.now().toUtc());
+      currentTime = DateFormat('HH:mm:ss').format(DateTime.now().toUtc()) + " z";
+      dayOfWeek = DateFormat('EEEE').format(DateTime.now());
+      date = DateFormat('yyyy-MM-dd').format(DateTime.now());
     });
   }
 
@@ -120,12 +124,20 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Current Time (GMT): $currentTime',
+              dayOfWeek,
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              date,
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              currentTime,
               style: Theme.of(context).textTheme.headline4,
             ),
             SizedBox(height: 20),
             Text(
-              'Grid Square: $gridSquare',
+              gridSquare,
               style: Theme.of(context).textTheme.headline4,
             ),
           ],
