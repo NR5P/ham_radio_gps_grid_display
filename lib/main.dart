@@ -82,18 +82,6 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  /*
-  String calculateGridSquare(double latitude, double longitude) {
-    int lat = (latitude + 90).toInt() * 60;
-    int lon = (longitude + 180).toInt() * 60;
-    String gridSquare = String.fromCharCode(65 + (lon / 120).floor()) +
-        String.fromCharCode(65 + (lat / 120).floor()) +
-        String.fromCharCode(48 + ((lon % 120) / 10).floor()) +
-        String.fromCharCode(48 + ((lat % 120) / 10).floor());
-    return gridSquare;
-  }
-  */
-
   String calculateGridSquare(double latitude, double longitude) {
     // Longitude calculations
     int longIndex = ((longitude + 180) / 20).floor();
