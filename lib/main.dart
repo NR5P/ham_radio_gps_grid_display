@@ -107,6 +107,38 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title!),
       ),
+          body: Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween, // Aligns children with space in between
+      children: <Widget>[
+        // Top part for day, date, and time
+        Column(
+          children: <Widget>[
+            SizedBox(height: 20), // Adds some space at the top
+            Text(
+              dayOfWeek,
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              date,
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              currentTime,
+              style: Theme.of(context).textTheme.headline4,
+            ),
+          ],
+        ),
+        // Bottom part for grid square
+        Padding(
+          padding: EdgeInsets.only(bottom: 20), // Adds some space at the bottom
+          child: Text(
+            gridSquare,
+            style: Theme.of(context).textTheme.headline4,
+          ),
+        ),
+      ],
+    ),
+    /*
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -131,6 +163,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
+      */
     );
   }
 }
