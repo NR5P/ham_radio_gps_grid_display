@@ -107,7 +107,8 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title!),
       ),
-          body: Column(
+      body: Center(
+        child: Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween, // Aligns children with space in between
       children: <Widget>[
         // Top part for day, date, and time
@@ -137,33 +138,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ],
-    ),
-    /*
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              dayOfWeek,
-              style: Theme.of(context).textTheme.headline4,
-            ),
-            Text(
-              date,
-              style: Theme.of(context).textTheme.headline4,
-            ),
-            Text(
-              currentTime,
-              style: Theme.of(context).textTheme.headline4,
-            ),
-            SizedBox(height: 20),
-            Text(
-              gridSquare,
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      */
+    )),
     );
   }
 }
